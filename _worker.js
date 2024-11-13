@@ -4085,7 +4085,7 @@ var SignJWT = class extends ProduceJWT {
 };
 
 // src/worker.js
-var userID = "89b3cbba-e6ac-485a-9481-976a0415eab9";
+var userID = "2309cfb6-3133-4e3a-a150-8b82b6002986";
 var trojanPassword = `bpb-trojan`;
 var proxyIPs = ["bpb.yousef.isegaro.com"];
 var defaultHttpPorts = ["80", "8080", "2052", "2082", "2086", "2095", "8880"];
@@ -4328,6 +4328,7 @@ var worker_default = {
               }
             });
           default:
+            return new Response('Not found', { status: 404 });
             url.hostname = "www.speedtest.net";
             url.protocol = "https:";
             request = new Request(url, request);
